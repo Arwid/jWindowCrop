@@ -48,9 +48,9 @@
 
 		base.destroy = function() {
 			base.$image.removeData("jWindowCrop"); // remove data
-			$(document).unbind(); // remove body binds
-			base.$image.unbind(); // remove image binds
-			base.$frame.unbind(); // remove frame binds
+			$(document).unbind("."+base.namespace); // remove body binds
+			base.$image.unbind("."+base.namespace); // remove image binds
+			base.$frame.unbind("."+base.namespace); // remove frame binds
 			base.$frame.find('.jwc_zoom_out').unbind(); // remove zoom triggers
 			base.$frame.find('.jwc_zoom_in').unbind();  // remove zoom triggers
 			$('.jwc_loader').remove();   // remove the added text
